@@ -345,7 +345,7 @@ export default function EditableLiftingBoard({ initialLifters, initialMeetState 
             {isAdvancingLifter ? 'Advancing...' : 'Next Lifter'}
           </button>
 
-          <p className="min-w-[220px] flex-1 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
+          <p className="min-w-55 flex-1 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">
             Current Lifter: <span className="font-semibold text-slate-900 dark:text-slate-100">{currentLifter?.name ?? 'Not set'}</span>
           </p>
 

@@ -132,7 +132,7 @@ export default function PublicBoardClient({ initialLifters, initialMeetState }: 
                 {table.getHeaderGroups().map((hg) => (
                   <TableRow key={hg.id}>
                     {hg.headers.map((header) => (
-                      <TableHead key={header.id} className={header.id === 'name' ? 'min-w-[320px] text-sm md:text-base' : 'min-w-[220px] text-center text-sm md:text-base'}>
+                      <TableHead key={header.id} className={header.id === 'name' ? 'min-w-[320px] text-sm md:text-base' : 'min-w-55 text-center text-sm md:text-base'}>
                         {flexRender(header.column.columnDef.header, header.getContext())}
                       </TableHead>
                     ))}
@@ -169,7 +169,7 @@ export default function PublicBoardClient({ initialLifters, initialMeetState }: 
 
 function AttemptCell({ attempt }: { attempt?: Attempt }) {
   if (!attempt || attempt.weight === null) {
-    return <Badge className="min-w-[120px] justify-center px-3 py-2 text-lg font-semibold tabular-nums border-slate-200 bg-slate-100 text-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 md:text-xl">---</Badge>
+    return <Badge className="min-w-30 justify-center px-3 py-2 text-lg font-semibold tabular-nums border-slate-200 bg-slate-100 text-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 md:text-xl">---</Badge>
   }
 
   const styles: Record<Attempt['status'], string> = {
@@ -180,7 +180,7 @@ function AttemptCell({ attempt }: { attempt?: Attempt }) {
   }
 
   return (
-    <Badge className={cn('min-w-[120px] justify-center px-3 py-2 text-lg font-bold tabular-nums md:text-xl', styles[attempt.status])}>
+    <Badge className={cn('min-w-30 justify-center px-3 py-2 text-lg font-bold tabular-nums md:text-xl', styles[attempt.status])}>
       {attempt.weight} kg
     </Badge>
   )
