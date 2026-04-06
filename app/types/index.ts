@@ -1,6 +1,6 @@
 
 export type MovementType = "squat" | "bench" | "deadlift";
-export type LiftStatus = "waiting" | "lifitng" | "Success" | "fail";
+export type LiftStatus = "waiting" | "lifting" | "success" | "fail";
 
 export interface Attempt {
   weight: number | null;
