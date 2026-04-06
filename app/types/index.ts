@@ -1,4 +1,3 @@
-
 export type MovementType = "squat" | "bench" | "deadlift";
 export type LiftStatus = "waiting" | "lifting" | "success" | "fail";
 
@@ -31,4 +30,18 @@ export interface Lifter {
   best_bench: number;
   best_deadlift: number;
   total: number;
+}
+
+export interface LifterInsert {
+  id: string
+  name: string
+  squat_1: Attempt
+  squat_2: Attempt
+  squat_3: Attempt
+  bench_1: Attempt
+  bench_2: Attempt
+  bench_3: Attempt
+  deadlift_1: Attempt
+  deadlift_2: Attempt
+  deadlift_3: Attempt
 }
